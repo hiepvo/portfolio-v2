@@ -1,0 +1,14 @@
+<div data-scroll-header id = "sticky" class="header-sticky sticky">
+    <header class = "main-nav">
+        <div class="c2bg">
+            <h6 class="letter">H</h6>
+        </div>
+        <ul>
+            {{#each nav-items}}
+                <li>
+                    <a class="nav-item {{active}}" data-easing="easeInCubic" href = "{{nav-link}}">{{nav-text}}</a>
+                </li>
+            {{/each}}
+        </ul>
+    </header>
+</div>
