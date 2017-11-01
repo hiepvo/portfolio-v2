@@ -124,19 +124,19 @@ li {
 .main-nav {
     width: 100%;
     background: #2f0735;
-    height: 60px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    display: flex;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
 }
 
-.main-nav ul {
-    display: inline-flex;
-    padding-left: 10rem;
+.main-nav .menu {
+    padding: 2rem 0 2rem;
+    float: right;
 }
 
-.main-nav li {
-    width: 150px;
+.main-nav ul li {
+    float: left;
 }
 
 .main-nav li a {
@@ -144,624 +144,694 @@ li {
     color: #fff;
     text-transform: uppercase;
     transition: 0.3s color;
+    padding: 0 20px 0;
 }
 
 .main-nav li a:hover {
     color: #9f4d57;
 }
 
-.active {
-    color: #9f4d57 !important;
+.main-nav .menu {
+    transition: max-height .2s ease-out;
 }
 
-.container {
-    position: relative;
-    min-height: 920px;
-    width: 100%;
-    text-align: center;
-}
+/* menu icon */
 
-.hero{
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.container.first {
-    padding-top: 8rem;
-    background: linear-gradient(to bottom, #2f0735, #0C8592);
-
-}
-
-.container.secondary {
-    background: linear-gradient(to bottom, #2f0735, #1C516D);
-    position: absolute;
-    z-index: 100;
-    top: 125vh;
-}
-
-.container.tiltTop:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    left: 0;
-    height: 160px;
-    top: -159px;
-    background: #2f0735;
-    clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
-}
-
-.container.third {
-    background: linear-gradient(to bottom, #2c3e50, #2980b9);
-    position: absolute;
-    z-index: 100;
-    top: 250vh;
-}
-
-.container.third:before {
-    background: #2c3e50;
-}
-
-.container.fourth {
-    background: linear-gradient(to bottom, #292E49, #536976);
-    position: absolute;
-    z-index: 100;
-    top: 360vh;
-}
-
-.container.fourth:before {
-    background: #292E49
-}
-
-.container > .title {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 6rem;
-    font-weight: normal;
-    margin: 0;
-}
-
-.header-sticky {
-    position: absolute;
-    text-align: center;
-    background: white;
-    width: 100%;
-    z-index: 200;
-}
-
-.sticky {
-    position: fixed;
-    background: #fff;
-    top: 0;
-    width: 100%;
-    z-index: 200;
-}
-
-.box-content {
-    position: relative;
-    border: 0px solid rgba(255, 255, 255, 1);
-    background: rgba(2, 46, 73, 0.8);
-    border-radius: 0;
-    box-shadow: 0px 1px 25px 4px rgba(47, 46, 46, 0.3);
-    padding-top: 2.5rem;
-}
-
-.block {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.textStyle {
-    color: rgba(255, 255, 255, 0.75);
-    font-family: "Geogrotesque", "Helvetica", "Arial", sans-serif;
-    font-size: 1.4rem;
-    transition: color 0.3s;
-}
-
-a.textStyle:hover {
-    color: rgba(0, 214, 70, 0.7);
-}
-
-.greeting {
-    font-size: 6vw;
-    color: rgba(255, 255, 255, .75);
-    font-family: cursive, "Geogrotesque", "Helvetica", "Arial", sans-serif;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 7%;
-    position: relative;
-}
-
-.greeting .description {
-    font-size: 1.8vw;
-}
-
-.txtNew {
-    word-wrap: break-word;
-    width: 35rem;
-}
-
-.txtNew h6 {
-    font-size: 1.6rem;
-    margin-top: 0;
-    margin-bottom: 5%;
-    text-align: center;
-    text-transform: uppercase;
-    color: rgba(0, 214, 70, 0.7);
-}
-
-.txtNew div {
-    text-align: left;
-    margin: 0 2rem 3rem;
-    font-size: 1.4rem;
-}
-
-.txtNew ul {
-    width: 100%;
-}
-
-.txtNew ul li {
-    list-style-type: circle;
-    color: rgba(0, 214, 70, 1);
-    font-size: 1.4rem;
-
-}
-
-.circle-half {
-    position: absolute;
-    left: 7rem;
-    height: 3.8rem;
-    width: 4rem;
-    border-radius: 50%;
-    box-shadow: 3px 0px 0px 0px rgba(0, 214, 70, 1);
-}
-
-.circle-half .letter {
-    position: absolute;
-    right: 25%;
-    top: 14%;
-    font-size: 2rem;
-    margin: 0;
-    color: rgba(0, 214, 70, 1);
-}
-
-#skills .title {
-    padding-bottom: 5rem;
-}
-
-.skill-bar {
-    font-family: cursive;
-    width: 75%;
-    height: 30px;
-    position: relative;
-    margin: 20px auto;
-}
-
-.skill-area {
-    margin-left: 5px;
-    color: #fff;
-    font-size: 14px;
-    height: 25px;
-    line-height: 25px;
-}
-
-.percent {
-    padding-right: 5px;
-    color: #fff;
-    font-size: 14px;
-    height: 25px;
-    line-height: 25px;
-    margin-left: auto;
-}
-
-#skill-html {
-    width: 20%;
-    height: 25px;
-    background-color: rgba(0, 214, 70, 0.75);
-    display: flex;
-}
-
-.skill-html-animation{
-    animation: Animate-HTML 3s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes Animate-HTML {
-    from {
-        width: 20%;
-    }
-    to {
-        width: 100%
-    }
-}
-
-#skill-css {
-    width: 20%;
-    height: 25px;
-    line-height: 25px;
-    background-color: #55a69f;
-    display: flex;
-}
-
-.skill-css-animation{
-    animation: Animate-CSS 3s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes Animate-CSS {
-    from {
-        width: 20%;
-    }
-    to {
-        width: 90%
-    }
-}
-
-#skill-jQuery {
-    width: 20%;
-    height: 25px;
-    background-color: #99856d;
-    display: flex;
-}
-
-.skill-jQuery-animation{
-    animation: Animate-jQuery 2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes Animate-jQuery {
-    from {
-        width: 20%;
-    }
-    to {
-        width: 65%
-    }
-}
-
-#skill-JS {
-    width: 20%;
-    height: 25px;
-    background-color: #c44e45;
-    display: flex;
-}
-.skill-JS-animation{
-    animation: Animate-JS 4s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes Animate-JS {
-    from {
-        width: 20%;
-    }
-    to {
-        width: 85%
-    }
-}
-
-#skill-react {
-    width: 20%;
-    height: 25px;
-    background-color: #f8a51e;
-    display: flex;
-}
-
-.skill-react-animation{
-    animation: Animate-ReactJS 2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes Animate-ReactJS {
-    from {
-        width: 20%;
-    }
-    to {
-        width: 70%
-    }
-}
-
-#skill-xml {
-    width: 20%;
-    height: 25px;
-    background-color: #5aa669;
-    display: flex;
-}
-
-.skill-xml-animation{
-    animation: Animate-XML 3s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes Animate-XML {
-    from {
-        width: 20%;
-    }
-    to {
-        width: 60%
-    }
-}
-
-#skill-sql {
-    width: 20%;
-    height: 25px;
-    background-color: #23b1db;
-    display: flex;
-}
-
-.skill-sql-animation{
-    animation: Animate-SQL 2s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes Animate-SQL {
-    from {
-        width: 20%;
-    }
-    to {
-        width: 62%
-    }
-}
-
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form input[type="tel"],
-#contact-form input[type="url"],
-#contact-form textarea,
-#contact-form button[type="submit"] {
-    font: 400 12px/16px "Geogrotesque", "Helvetica", "Arial", sans-serif;;
-}
-
-#contact-form {
-    text-align: left;
-    width: 60%;
-    background: rgba(2, 46, 73, 0.8);
-    padding: 25px;
-    margin: 50px 0;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-
-#contact-form fieldset {
-    border: medium none !important;
-    margin: 0 0 10px;
-    min-width: 100%;
-    padding: 0;
-    width: 100%;
-}
-
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form input[type="tel"],
-#contact-form input[type="url"],
-#contact-form textarea {
-    width: 97%;
-    border: none;
-    background: #FFF;
-    margin: 0 0 5px;
-    padding: 8px;
-}
-
-#contact-form textarea {
-    height: 100px;
-    max-width: 100%;
-    resize: none;
-}
-
-#contact-form button[type="submit"] {
+.main-nav .menu-icon {
     cursor: pointer;
-    width: 15rem;
-    border: none;
-    background: rgba(0, 214, 70, 0.7);
-    color: #FFF;
-    margin: 0 0 5px;
-    padding: 10px;
-    font-size: 18px;
-    transition: background-color 0.3s ease-in-out;
+    display: none;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
 }
 
-#contact-form button[type="submit"]:hover {
-    background: rgba(0, 214, 70, 0.5);
+.main-nav .menu-icon .navicon {
+    background: rgba(0, 214, 70, 0.7);;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
 }
 
-#contact-form input:focus,
-#contact-form textarea:focus {
-    outline: 0;
-}
-
-@media screen and (max-width: 768px) {
-    .hero{
-        position: relative;
-    }
-    .container.tiltTop:before{
-        position: relative;
-    }
-    .container.secondary{
-        top: 100vh;
-    }
-    .container.third{
-        top: 200vh;
-    }
-    .container.fourth{
-        top:300vh;
-    }
-}
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
+.main-nav .menu-icon .navicon:before,
+.main-nav .menu-icon .navicon:after {
+    background: rgba(0, 214, 70, 0.7);;
+    content: '';
+    display: block;
+    height: 100%;
     position: absolute;
-    width: 1px;
-    white-space: nowrap; /* 1 */
+    transition: all .2s ease-out;
+    width: 100%;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    -webkit-clip-path: none;
-    clip-path: none;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-    white-space: inherit;
+.main-nav .menu-icon .navicon:before {
+    top: 5px;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
+.main-nav .menu-icon .navicon:after {
+    top: -5px;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+/* menu btn */
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.main-nav .menu-btn {
+    display: none;
 }
 
-.clearfix:after {
-    clear: both;
+.main-nav .menu-btn:checked ~ .menu {
+    max-height: 240px;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+.main-nav .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
 }
 
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+.main-nav .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+.main-nav .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
 
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        /* Black prints faster:
-                                          http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
+.main-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.main-nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-nav .menu-icon {
+        display: inline-block;
+        overflow: hidden;
     }
 
-    a,
-    a:visited {
-        text-decoration: underline;
+    .main-nav .menu {
+        overflow: hidden;
+        max-height: 0;
+        display: block;
+        padding: 0;
+        float: none;
+        clear: both;
+        margin-left: 7rem;
+        font-size: 4rem;
     }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
+    .main-nav .menu li {
+        float: none;
     }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
+    .main-nav .menu li a {
+        padding: 0;
+    }
+}
+    .active {
+        color: #9f4d57 !important;
     }
 
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+    .container {
+        position: relative;
+        min-height: 920px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .container.first {
+        padding-top: 8rem;
+        background: linear-gradient(to bottom, #2f0735, #0C8592);
+
+    }
+
+    .container.secondary {
+        background: linear-gradient(to bottom, #2f0735, #1C516D);
+        position: absolute;
+        z-index: 100;
+        top: 125vh;
+    }
+
+    .container.tiltTop:before {
         content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: 160px;
+        top: -159px;
+        background: #2f0735;
+        clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
     }
 
-    pre {
-        white-space: pre-wrap !important;
+    .container.third {
+        background: linear-gradient(to bottom, #2c3e50, #2980b9);
+        position: absolute;
+        z-index: 100;
+        top: 250vh;
     }
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
+    .container.third:before {
+        background: #2c3e50;
+    }
+
+    .container.fourth {
+        background: linear-gradient(to bottom, #292E49, #536976);
+        position: absolute;
+        z-index: 100;
+        top: 360vh;
+        min-height: 70rem;
+    }
+
+    .container.fourth:before {
+        background: #292E49
+    }
+
+    .container > .title {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 6rem;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .box-content {
+        position: relative;
+        border: 0px solid rgba(255, 255, 255, 1);
+        background: rgba(2, 46, 73, 0.8);
+        border-radius: 0;
+        box-shadow: 0px 1px 25px 4px rgba(47, 46, 46, 0.3);
+        padding-top: 2.5rem;
+    }
+
+    .block {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .textStyle {
+        color: rgba(255, 255, 255, 0.75);
+        font-family: "Geogrotesque", "Helvetica", "Arial", sans-serif;
+        font-size: 1.4rem;
+        transition: color 0.3s;
+    }
+
+    a.textStyle:hover {
+        color: rgba(0, 214, 70, 0.7);
+    }
+
+    .greeting {
+        font-size: 6vw;
+        color: rgba(255, 255, 255, .75);
+        font-family: cursive, "Geogrotesque", "Helvetica", "Arial", sans-serif;
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: 7%;
+        position: relative;
+    }
+
+    .greeting .description {
+        font-size: 1.8vw;
+    }
+
+    .txtNew {
+        word-wrap: break-word;
+        width: 35rem;
+    }
+
+    .txtNew h6 {
+        font-size: 1.6rem;
+        margin-top: 0;
+        margin-bottom: 5%;
+        text-align: center;
+        text-transform: uppercase;
+        color: rgba(0, 214, 70, 0.7);
+    }
+
+    .txtNew div {
+        text-align: left;
+        margin: 0 2rem 3rem;
+        font-size: 1.4rem;
+    }
+
+    .txtNew ul {
+        width: 100%;
+    }
+
+    .txtNew ul li {
+        list-style-type: circle;
+        color: rgba(0, 214, 70, 1);
+        font-size: 1.4rem;
+
+    }
+
+    .logo {
+        position: absolute;
+        left: 7rem;
+        height: 3.8rem;
+        width: 4rem;
+        border-radius: 50%;
+        margin: 1rem;
+        box-shadow: 3px 0px 0px 0px rgba(0, 214, 70, 1);
+    }
+
+    .logo .letter {
+        position: absolute;
+        right: 25%;
+        top: 14%;
+        font-size: 2rem;
+        margin: 0;
+        color: rgba(0, 214, 70, 1);
+    }
+
+    #skills .title {
+        padding-bottom: 5rem;
+    }
+
+    .skill-bar {
+        font-family: cursive;
+        width: 75%;
+        height: 30px;
+        position: relative;
+        margin: 20px auto;
+    }
+
+    .skill-area {
+        margin-left: 5px;
+        color: #fff;
+        font-size: 14px;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    .percent {
+        padding-right: 5px;
+        color: #fff;
+        font-size: 14px;
+        height: 25px;
+        line-height: 25px;
+        margin-left: auto;
+    }
+
+    #skill-html {
+        width: 20%;
+        height: 25px;
+        background-color: rgba(0, 214, 70, 0.75);
+        display: flex;
+    }
+
+    .skill-html-animation {
+        animation: Animate-HTML 3s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes Animate-HTML {
+        from {
+            width: 20%;
+        }
+        to {
+            width: 100%
+        }
+    }
+
+    #skill-css {
+        width: 20%;
+        height: 25px;
+        line-height: 25px;
+        background-color: #55a69f;
+        display: flex;
+    }
+
+    .skill-css-animation {
+        animation: Animate-CSS 3s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes Animate-CSS {
+        from {
+            width: 20%;
+        }
+        to {
+            width: 90%
+        }
+    }
+
+    #skill-jQuery {
+        width: 20%;
+        height: 25px;
+        background-color: #99856d;
+        display: flex;
+    }
+
+    .skill-jQuery-animation {
+        animation: Animate-jQuery 2s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes Animate-jQuery {
+        from {
+            width: 20%;
+        }
+        to {
+            width: 65%
+        }
+    }
+
+    #skill-JS {
+        width: 20%;
+        height: 25px;
+        background-color: #c44e45;
+        display: flex;
+    }
+
+    .skill-JS-animation {
+        animation: Animate-JS 4s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes Animate-JS {
+        from {
+            width: 20%;
+        }
+        to {
+            width: 85%
+        }
+    }
+
+    #skill-react {
+        width: 20%;
+        height: 25px;
+        background-color: #f8a51e;
+        display: flex;
+    }
+
+    .skill-react-animation {
+        animation: Animate-ReactJS 2s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes Animate-ReactJS {
+        from {
+            width: 20%;
+        }
+        to {
+            width: 70%
+        }
+    }
+
+    #skill-xml {
+        width: 20%;
+        height: 25px;
+        background-color: #5aa669;
+        display: flex;
+    }
+
+    .skill-xml-animation {
+        animation: Animate-XML 3s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes Animate-XML {
+        from {
+            width: 20%;
+        }
+        to {
+            width: 60%
+        }
+    }
+
+    #skill-sql {
+        width: 20%;
+        height: 25px;
+        background-color: #23b1db;
+        display: flex;
+    }
+
+    .skill-sql-animation {
+        animation: Animate-SQL 2s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes Animate-SQL {
+        from {
+            width: 20%;
+        }
+        to {
+            width: 62%
+        }
+    }
+
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form input[type="tel"],
+    #contact-form input[type="url"],
+    #contact-form textarea,
+    #contact-form button[type="submit"] {
+        font: 400 12px/16px "Geogrotesque", "Helvetica", "Arial", sans-serif;;
+    }
+
+    #contact-form {
+        text-align: left;
+        width: 60%;
+        background: rgba(2, 46, 73, 0.8);
+        padding: 25px;
+        margin: 50px 0;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+
+    #contact-form fieldset {
+        border: medium none !important;
+        margin: 0 0 10px;
+        min-width: 100%;
+        padding: 0;
+        width: 100%;
+    }
+
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form input[type="tel"],
+    #contact-form input[type="url"],
+    #contact-form textarea {
+        width: 97%;
+        border: none;
+        background: #FFF;
+        margin: 0 0 5px;
+        padding: 8px;
+    }
+
+    #contact-form textarea {
+        height: 100px;
+        max-width: 100%;
+        resize: none;
+    }
+
+    #contact-form button[type="submit"] {
+        cursor: pointer;
+        width: 15rem;
+        border: none;
+        background: rgba(0, 214, 70, 0.7);
+        color: #FFF;
+        margin: 0 0 5px;
+        padding: 10px;
+        font-size: 18px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    #contact-form button[type="submit"]:hover {
+        background: rgba(0, 214, 70, 0.5);
+    }
+
+    #contact-form input:focus,
+    #contact-form textarea:focus {
+        outline: 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .hero {
+            position: relative;
+        }
+
+        .container.tiltTop:before {
+            position: relative;
+        }
+
+        .container.secondary {
+            top: 100vh;
+        }
+
+        .container.third {
+            top: 200vh;
+        }
+
+        .container.fourth {
+            top: 300vh;
+        }
+    }
+    /* ==========================================================================
+       Helper classes
+       ========================================================================== */
+    /*
+     * Hide visually and from screen readers
+     */
+    .hidden {
+        display: none !important;
     }
 
     /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     * Hide only visually, but have it available for screen readers:
+     * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+     *
+     * 1. For long content, line feeds are not interpreted as spaces and small width
+     *    causes content to wrap 1 word per line:
+     *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
      */
-    thead {
-        display: table-header-group;
+    .visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        -webkit-clip-path: inset(50%);
+        clip-path: inset(50%);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        white-space: nowrap; /* 1 */
     }
 
-    tr,
-    img {
-        page-break-inside: avoid;
+    /*
+     * Extends the .visuallyhidden class to allow the element
+     * to be focusable when navigated to via the keyboard:
+     * https://www.drupal.org/node/897638
+     */
+    .visuallyhidden.focusable:active,
+    .visuallyhidden.focusable:focus {
+        clip: auto;
+        -webkit-clip-path: none;
+        clip-path: none;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+        white-space: inherit;
     }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
+    /*
+     * Hide visually and from screen readers, but maintain layout
+     */
+    .invisible {
+        visibility: hidden;
     }
 
-    h2,
-    h3 {
-        page-break-after: avoid;
+    /*
+     * Clearfix: contain floats
+     *
+     * For modern browsers
+     * 1. The space content is one way to avoid an Opera bug when the
+     *    `contenteditable` attribute is included anywhere else in the document.
+     *    Otherwise it causes space to appear at the top and bottom of elements
+     *    that receive the `clearfix` class.
+     * 2. The use of `table` rather than `block` is only necessary if using
+     *    `:before` to contain the top-margins of child elements.
+     */
+    .clearfix:before,
+    .clearfix:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
     }
-}
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    @media print,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
+        /* Style adjustments for high resolution devices */
+    }
+
+    /* ==========================================================================
+       Print styles.
+       Inlined to avoid the additional HTTP request:
+       http://www.phpied.com/delay-loading-your-print-css/
+       ========================================================================== */
+    @media print {
+        *,
+        *:before,
+        *:after {
+            background: transparent !important;
+            color: #000 !important;
+            /* Black prints faster:
+                                              http://www.sanbeiji.com/archives/953 */
+            box-shadow: none !important;
+            text-shadow: none !important;
+        }
+
+        a,
+        a:visited {
+            text-decoration: underline;
+        }
+
+        a[href]:after {
+            content: " (" attr(href) ")";
+        }
+
+        abbr[title]:after {
+            content: " (" attr(title) ")";
+        }
+
+        /*
+         * Don't show links that are fragment identifiers,
+         * or use the `javascript:` pseudo protocol
+         */
+        a[href^="#"]:after,
+        a[href^="javascript:"]:after {
+            content: "";
+        }
+
+        pre {
+            white-space: pre-wrap !important;
+        }
+
+        pre,
+        blockquote {
+            border: 1px solid #999;
+            page-break-inside: avoid;
+        }
+
+        /*
+         * Printing Tables:
+         * http://css-discuss.incutio.com/wiki/Printing_Tables
+         */
+        thead {
+            display: table-header-group;
+        }
+
+        tr,
+        img {
+            page-break-inside: avoid;
+        }
+
+        p,
+        h2,
+        h3 {
+            orphans: 3;
+            widows: 3;
+        }
+
+        h2,
+        h3 {
+            page-break-after: avoid;
+        }
+    }

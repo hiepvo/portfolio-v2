@@ -1,14 +1,14 @@
-<div data-scroll-header id = "sticky" class="header-sticky sticky">
-    <header class = "main-nav">
-        <div class="circle-half">
-            <h6 class="letter">H</h6>
-        </div>
-        <ul>
-            {{#each nav-items}}
-                <li>
-                    <a class="nav-item {{active}}" data-easing="easeInCubic" href = "{{nav-link}}">{{nav-text}}</a>
-                </li>
-            {{/each}}
-        </ul>
-    </header>
-</div>
+<header data-scroll-header class = "main-nav">
+    <div class = "logo">
+        <h6 class = "letter">H</h6>
+    </div>
+    <input class = "menu-btn" type = "checkbox" id = "menu-btn"/>
+    <label class = "menu-icon" for = "menu-btn"><span class = "navicon"></span></label>
+    <ul class = "menu">
+        {{#each nav-items}}
+            <li>
+                <a class = "nav-item {{active}}" data-easing = "easeInCubic" href = "{{nav-link}}">{{nav-text}}</a>
+            </li>
+        {{/each}}
+    </ul>
+</header>
