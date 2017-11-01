@@ -40,7 +40,6 @@ function clickHandler (event) {
     utils.addClass(el, 'active')
 }
 
-
 function createHTML(data){
     var portfolio       = document.getElementById('portfolio');
     portfolio.innerHTML = navTemplate(data);

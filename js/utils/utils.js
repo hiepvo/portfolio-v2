@@ -44,7 +44,7 @@ const smoothScroll = function(){
     smoothScrollWithoutHash('a[href*="#"]', {header: '[data-scroll-header]'}, {speed: 1200});
 }
 
-let didScroll   = false;
+let didScroll      = false;
 let scrollInterval = setInterval(function(){
     if(didScroll){
         didScroll = false;
@@ -53,26 +53,26 @@ let scrollInterval = setInterval(function(){
 }, 100);
 
 function scrollPos(){
-    didScroll    = true;
-    let skills = document.querySelectorAll(".skill-bar [id^='skill-']");
-
-    let el_nav = document.querySelector("#sticky");
-    let sec_about = document.querySelector('#about');
-
-    let pageY = window.scrollY;
-    let total_height = el_nav.getBoundingClientRect().bottom + sec_about.getBoundingClientRect().bottom;
-
-    if (total_height <= pageY){
+    didScroll        = true;
+    let skills       = document.querySelectorAll('.skill-bar [id^=\'skill-\']');
+    let sec_skills   = document.querySelector('#skills');
+    let pageY        = window.scrollY;
+    parallax();
+    if(sec_skills.getBoundingClientRect().top <= pageY  +250){
         for(let i = 0; i < skills.length; i++){
-            let el = document.querySelector("#"+ skills[i].id);
-            addClass(el, skills[i].id+'-animation');
+            let el = document.querySelector('#' + skills[i].id);
+            addClass(el, skills[i].id + '-animation');
         }
-
-        document.removeEventListener('scroll', scrollPos);
     }
 }
 
 document.addEventListener('scroll', scrollPos, false);
+
+function parallax(){
+    let sec_about   = document.querySelector('#about');
+    var scrolled = window.scrollY;
+    sec_about.style.top = -(scrolled*0.0315)+'rem';
+};
 
 module.exports = {
     addClass: addClass,

@@ -161,6 +161,15 @@ li {
     text-align: center;
 }
 
+.hero{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .container.first {
     padding-top: 8rem;
     background: linear-gradient(to bottom, #2f0735, #0C8592);
@@ -169,6 +178,9 @@ li {
 
 .container.secondary {
     background: linear-gradient(to bottom, #2f0735, #1C516D);
+    position: absolute;
+    z-index: 100;
+    top: 125vh;
 }
 
 .container.tiltTop:before {
@@ -177,13 +189,16 @@ li {
     width: 100%;
     left: 0;
     height: 160px;
-    top: -160px;
+    top: -159px;
     background: #2f0735;
     clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
 }
 
 .container.third {
     background: linear-gradient(to bottom, #2c3e50, #2980b9);
+    position: absolute;
+    z-index: 100;
+    top: 250vh;
 }
 
 .container.third:before {
@@ -192,6 +207,9 @@ li {
 
 .container.fourth {
     background: linear-gradient(to bottom, #292E49, #536976);
+    position: absolute;
+    z-index: 100;
+    top: 360vh;
 }
 
 .container.fourth:before {
@@ -343,7 +361,7 @@ a.textStyle:hover {
 }
 
 #skill-html {
-    width: 100%;
+    width: 20%;
     height: 25px;
     background-color: rgba(0, 214, 70, 0.75);
     display: flex;
@@ -351,6 +369,7 @@ a.textStyle:hover {
 
 .skill-html-animation{
     animation: Animate-HTML 3s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes Animate-HTML {
@@ -363,7 +382,7 @@ a.textStyle:hover {
 }
 
 #skill-css {
-    width: 90%;
+    width: 20%;
     height: 25px;
     line-height: 25px;
     background-color: #55a69f;
@@ -372,6 +391,7 @@ a.textStyle:hover {
 
 .skill-css-animation{
     animation: Animate-CSS 3s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes Animate-CSS {
@@ -384,7 +404,7 @@ a.textStyle:hover {
 }
 
 #skill-jQuery {
-    width: 65%;
+    width: 20%;
     height: 25px;
     background-color: #99856d;
     display: flex;
@@ -392,6 +412,7 @@ a.textStyle:hover {
 
 .skill-jQuery-animation{
     animation: Animate-jQuery 2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes Animate-jQuery {
@@ -404,13 +425,14 @@ a.textStyle:hover {
 }
 
 #skill-JS {
-    width: 85%;
+    width: 20%;
     height: 25px;
     background-color: #c44e45;
     display: flex;
 }
 .skill-JS-animation{
     animation: Animate-JS 4s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes Animate-JS {
@@ -423,7 +445,7 @@ a.textStyle:hover {
 }
 
 #skill-react {
-    width: 70%;
+    width: 20%;
     height: 25px;
     background-color: #f8a51e;
     display: flex;
@@ -431,6 +453,7 @@ a.textStyle:hover {
 
 .skill-react-animation{
     animation: Animate-ReactJS 2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes Animate-ReactJS {
@@ -443,7 +466,7 @@ a.textStyle:hover {
 }
 
 #skill-xml {
-    width: 60%;
+    width: 20%;
     height: 25px;
     background-color: #5aa669;
     display: flex;
@@ -451,6 +474,7 @@ a.textStyle:hover {
 
 .skill-xml-animation{
     animation: Animate-XML 3s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes Animate-XML {
@@ -463,7 +487,7 @@ a.textStyle:hover {
 }
 
 #skill-sql {
-    width: 62%;
+    width: 20%;
     height: 25px;
     background-color: #23b1db;
     display: flex;
@@ -471,6 +495,7 @@ a.textStyle:hover {
 
 .skill-sql-animation{
     animation: Animate-SQL 2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes Animate-SQL {
@@ -513,7 +538,7 @@ a.textStyle:hover {
 #contact-form input[type="tel"],
 #contact-form input[type="url"],
 #contact-form textarea {
-    width: 100%;
+    width: 97%;
     border: none;
     background: #FFF;
     margin: 0 0 5px;
@@ -547,6 +572,23 @@ a.textStyle:hover {
     outline: 0;
 }
 
+@media screen and (max-width: 768px) {
+    .hero{
+        position: relative;
+    }
+    .container.tiltTop:before{
+        position: relative;
+    }
+    .container.secondary{
+        top: 100vh;
+    }
+    .container.third{
+        top: 200vh;
+    }
+    .container.fourth{
+        top:300vh;
+    }
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
