@@ -44,6 +44,36 @@ const smoothScroll = function(){
     smoothScrollWithoutHash('a[href*="#"]', {header: '[data-scroll-header]'}, {speed: 1200});
 }
 
+let didScroll   = false;
+let scrollInterval = setInterval(function(){
+    if(didScroll){
+        didScroll = false;
+        clearInterval(scrollInterval);
+    }
+}, 100);
+
+function scrollPos(){
+    didScroll    = true;
+    let skills = document.querySelectorAll(".skill-bar [id^='skill-']");
+
+    let el_nav = document.querySelector("#sticky");
+    let sec_about = document.querySelector('#about');
+
+    let pageY = window.scrollY;
+    let total_height = el_nav.getBoundingClientRect().bottom + sec_about.getBoundingClientRect().bottom;
+
+    if (total_height <= pageY){
+        for(let i = 0; i < skills.length; i++){
+            let el = document.querySelector("#"+ skills[i].id);
+            addClass(el, skills[i].id+'-animation');
+        }
+
+        document.removeEventListener('scroll', scrollPos);
+    }
+}
+
+document.addEventListener('scroll', scrollPos, false);
+
 module.exports = {
     addClass: addClass,
     removeClass: removeClass,

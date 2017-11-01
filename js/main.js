@@ -13,7 +13,6 @@ request.onload = function(){
     if(request.status >= 200 && request.status < 400){
         var data = JSON.parse(request.responseText);
         createHTML(data);
-        utils.smoothScroll();
         var items = document.getElementsByClassName('nav-item');
         for(let item of items){
             item.addEventListener('click', clickHandler, false)
@@ -29,6 +28,8 @@ request.onerror = function(){
 };
 
 request.send();
+
+utils.smoothScroll();
 
 function clickHandler (event) {
     let els = document.getElementsByClassName('nav-item');
