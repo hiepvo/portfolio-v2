@@ -56,12 +56,16 @@ function scrollPos(){
     didScroll        = true;
     let skills       = document.querySelectorAll('.skill-bar [id^=\'skill-\']');
     let sec_skills   = document.querySelector('#skills');
+    let main_nav   = document.querySelector('.main-nav');
+
     let pageY        = window.scrollY;
     parallax();
-    if(sec_skills.getBoundingClientRect().top <= pageY  +250){
-        for(let i = 0; i < skills.length; i++){
-            let el = document.querySelector('#' + skills[i].id);
-            addClass(el, skills[i].id + '-animation');
+    if(sec_skills !== null){
+        if(sec_skills.getBoundingClientRect().top <= pageY  +250){
+            for(let i = 0; i < skills.length; i++){
+                let el = document.querySelector('#' + skills[i].id);
+                addClass(el, skills[i].id + '-animation');
+            }
         }
     }
 }
@@ -71,8 +75,8 @@ document.addEventListener('scroll', scrollPos, false);
 function parallax(){
     let sec_about   = document.querySelector('#about');
     var scrolled = window.scrollY;
-    sec_about.style.top = -(scrolled*0.0315)+'rem';
-};
+    if(sec_about !== null) sec_about.style.top = -(scrolled*0.0215)+'rem';
+}
 
 module.exports = {
     addClass: addClass,

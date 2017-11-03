@@ -100,6 +100,7 @@ textarea {
 body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    user-select: none;
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -126,12 +127,13 @@ li {
     background: #2f0735;
     position: fixed;
     top: 0;
+
     width: 100%;
     z-index: 200;
 }
 
 .main-nav .menu {
-    padding: 2rem 0 2rem;
+    margin: 2rem 0 2rem;
     float: right;
 }
 
@@ -163,7 +165,6 @@ li {
     float: right;
     padding: 28px 20px;
     position: relative;
-    user-select: none;
 }
 
 .main-nav .menu-icon .navicon {
@@ -245,593 +246,711 @@ li {
     .main-nav .menu li a {
         padding: 0;
     }
+
+    .box-content{
+        padding-top: 1.8rem;
+    }
+
+    .main-nav .menu{
+        margin: 0 0 0 7rem;
+    }
 }
-    .active {
-        color: #9f4d57 !important;
-    }
+.active {
+    color: #9f4d57 !important;
+}
 
-    .container {
-        position: relative;
-        min-height: 920px;
-        width: 100%;
-        text-align: center;
-    }
+#portfolio{
+    max-height: 100vh;
+}
+.container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
 
+.hero {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.container.first {
+    padding-top: 8rem;
+    background: linear-gradient(to bottom, #2f0735, #0C8592);
+    min-height: 80rem;
+}
+
+.container.secondary {
+    background: linear-gradient(to bottom, #2f0735, #1C516D);
+    position: relative;
+    z-index: 100;
+    top: 125vh;
+    min-height: 92rem;
+}
+
+.container.tiltTop:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 160px;
+    top: -159px;
+    background: #2f0735;
+    clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
+}
+
+.container.third {
+    background: linear-gradient(to bottom, #2c3e50, #2980b9);
+    position: relative;
+    z-index: 100;
+    top: 120vh;
+    min-height: 110rem;
+}
+
+.container.third:before {
+    background: #2c3e50;
+}
+
+.container.fourth {
+    background: linear-gradient(to bottom, #292E49, #536976);
+    position: relative;
+    z-index: 100;
+    top: 120vh;
+    min-height: 65rem;
+}
+
+.container.fourth:before {
+    background: #292E49
+}
+
+.container > .title {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 6rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+.box-content {
+    position: relative;
+    border: 0px solid rgba(255, 255, 255, 1);
+    background: rgba(2, 46, 73, 0.8);
+    border-radius: 0;
+    box-shadow: 0px 1px 25px 4px rgba(47, 46, 46, 0.3);
+    padding-top: 2.5rem;
+}
+
+.block {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.textStyle {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: "Geogrotesque", "Helvetica", "Arial", sans-serif;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+
+a.textStyle:hover {
+    color: rgba(0, 214, 70, 0.7);
+}
+
+.greeting {
+    font-size: 6vw;
+    color: rgba(255, 255, 255, .75);
+    font-family: cursive, "Geogrotesque", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 7%;
+    position: relative;
+}
+
+.greeting .description {
+    font-size: 1.8vw;
+}
+
+.txtNew {
+    word-wrap: break-word;
+    width: 35rem;
+}
+
+.txtNew h6 {
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 2%;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(0, 214, 70, 0.7);
+}
+
+.txtNew div {
+    text-align: left;
+    margin: 0 2rem 1rem;
+    font-size: 1.4rem;
+}
+
+.txtNew ul {
+    width: 100%;
+}
+
+.txtNew ul li {
+    list-style-type: circle;
+    color: rgba(0, 214, 70, 1);
+    font-size: 1.4rem;
+
+}
+
+.logo {
+    position: absolute;
+    left: 7rem;
+    height: 3.8rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin: 1rem;
+    box-shadow: 3px 0px 0px 0px rgba(0, 214, 70, 1);
+}
+
+.logo .letter {
+    position: absolute;
+    right: 25%;
+    top: 14%;
+    font-size: 2rem;
+    margin: 0;
+    color: rgba(0, 214, 70, 1);
+}
+
+#skills .title {
+    padding-bottom: 5rem;
+}
+
+.skill-bar {
+    font-family: cursive;
+    width: 75%;
+    height: 30px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.skill-area {
+    margin-left: 5px;
+    color: #fff;
+    font-size: 14px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.percent {
+    padding-right: 5px;
+    color: #fff;
+    font-size: 14px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: auto;
+}
+
+#skill-html {
+    width: 20%;
+    height: 25px;
+    background-color: rgba(0, 214, 70, 0.75);
+    display: flex;
+}
+
+.skill-html-animation {
+    animation: Animate-HTML 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Animate-HTML {
+    from {
+        width: 20%;
+    }
+    to {
+        width: 100%
+    }
+}
+
+#skill-css {
+    width: 20%;
+    height: 25px;
+    line-height: 25px;
+    background-color: #55a69f;
+    display: flex;
+}
+
+.skill-css-animation {
+    animation: Animate-CSS 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Animate-CSS {
+    from {
+        width: 20%;
+    }
+    to {
+        width: 90%
+    }
+}
+
+#skill-jQuery {
+    width: 20%;
+    height: 25px;
+    background-color: #99856d;
+    display: flex;
+}
+
+.skill-jQuery-animation {
+    animation: Animate-jQuery 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Animate-jQuery {
+    from {
+        width: 20%;
+    }
+    to {
+        width: 65%
+    }
+}
+
+#skill-JS {
+    width: 20%;
+    height: 25px;
+    background-color: #c44e45;
+    display: flex;
+}
+
+.skill-JS-animation {
+    animation: Animate-JS 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Animate-JS {
+    from {
+        width: 20%;
+    }
+    to {
+        width: 85%
+    }
+}
+
+#skill-react {
+    width: 20%;
+    height: 25px;
+    background-color: #f8a51e;
+    display: flex;
+}
+
+.skill-react-animation {
+    animation: Animate-ReactJS 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Animate-ReactJS {
+    from {
+        width: 20%;
+    }
+    to {
+        width: 70%
+    }
+}
+
+#skill-xml {
+    width: 20%;
+    height: 25px;
+    background-color: #5aa669;
+    display: flex;
+}
+
+.skill-xml-animation {
+    animation: Animate-XML 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Animate-XML {
+    from {
+        width: 20%;
+    }
+    to {
+        width: 60%
+    }
+}
+
+#skill-sql {
+    width: 20%;
+    height: 25px;
+    background-color: #23b1db;
+    display: flex;
+}
+
+.skill-sql-animation {
+    animation: Animate-SQL 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Animate-SQL {
+    from {
+        width: 20%;
+    }
+    to {
+        width: 62%
+    }
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form input[type="url"],
+#contact-form textarea,
+#contact-form button[type="submit"] {
+    font: 400 12px/16px "Geogrotesque", "Helvetica", "Arial", sans-serif;;
+}
+
+#contact-form {
+    text-align: left;
+    width: 60%;
+    background: rgba(2, 46, 73, 0.8);
+    padding: 25px;
+    margin: 50px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact-form fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form input[type="url"],
+#contact-form textarea {
+    width: 97%;
+    border: none;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 8px;
+}
+
+#contact-form textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+
+#contact-form button[type="submit"] {
+    cursor: pointer;
+    width: 15rem;
+    border: none;
+    background: rgba(0, 214, 70, 0.7);
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contact-form button[type="submit"]:hover {
+    background: rgba(0, 214, 70, 0.5);
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: 0;
+}
+
+.grid {
+    width: 100%;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-item {
+    margin: 1.2rem;
+    text-align: center;
+    position: relative;
+}
+
+.project-photo {
+    height: 100%;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+
+.space-list-item {
+    position: relative;
+    width: 36rem;
+    height: 35rem;
+    overflow: hidden;
+    transition: box-shadow 0.35s ease-out;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1), 0 0 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.space-list-item,
+.space-list-item li {
+    margin-bottom: 7px;
+}
+
+.space-list-item li:nth-of-type(2) {
+    font-size: 1.8rem;
+}
+
+
+.project-content {
+    line-height: 2rem;
+    width: 36rem;
+    margin: 0 auto;
+    color: #ffffff;
+    background-color: #172131;
+    position: absolute;
+    border-top: 4px solid #5590b9;
+    text-align: left;
+    overflow: hidden;
+    height: 35rem;
+    left: 0;
+    bottom: -1px;
+    clip: rect(36rem 36rem 36rem 0);
+
+    transition: clip 1s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+.space-list-item:hover .project-content {
+    clip: rect(0 36rem 36rem 0);
+}
+
+
+.project-content .project-desc {
+    padding: 1.8rem 2rem;
+    line-height: 2rem;
+    min-height: 25rem;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: #d3ddef;
+}
+
+.project-demo {
+    text-align: center;
+}
+
+.project-demo > a {
+    font-size: 1.6rem;
+
+    background-color: #292E49;
+    border-radius: 2px;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    z-index: 100;
+    transition: background-color 0.3s ease-out;
+}
+
+.project-demo > a:hover {
+    background-color: #536976;
+    cursor: pointer;
+}
+
+.project-demo ~ div {
+    font-size: 2rem;
+    color: #68CCE8;
+    position: absolute;
+    left: 0;
+    bottom: 1.8rem;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+@media only screen and (max-width: 768px) {
     .hero {
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    .container.first {
-        padding-top: 8rem;
-        background: linear-gradient(to bottom, #2f0735, #0C8592);
-
-    }
-
-    .container.secondary {
-        background: linear-gradient(to bottom, #2f0735, #1C516D);
-        position: absolute;
-        z-index: 100;
-        top: 125vh;
+        position: relative;
     }
 
     .container.tiltTop:before {
+        position: relative;
+    }
+
+    .container.secondary {
+        top: -25vh;
+    }
+
+    .container.third,
+    .container.fourth{
+        top: -50vh;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                          http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
         content: "";
-        position: absolute;
-        width: 100%;
-        left: 0;
-        height: 160px;
-        top: -159px;
-        background: #2f0735;
-        clip-path: polygon(0 0, 100% 100%, 100% 100%, 0 100%);
     }
 
-    .container.third {
-        background: linear-gradient(to bottom, #2c3e50, #2980b9);
-        position: absolute;
-        z-index: 100;
-        top: 250vh;
+    pre {
+        white-space: pre-wrap !important;
     }
 
-    .container.third:before {
-        background: #2c3e50;
-    }
-
-    .container.fourth {
-        background: linear-gradient(to bottom, #292E49, #536976);
-        position: absolute;
-        z-index: 100;
-        top: 360vh;
-        min-height: 70rem;
-    }
-
-    .container.fourth:before {
-        background: #292E49
-    }
-
-    .container > .title {
-        color: rgba(255, 255, 255, 0.75);
-        font-size: 6rem;
-        font-weight: normal;
-        margin: 0;
-    }
-
-    .box-content {
-        position: relative;
-        border: 0px solid rgba(255, 255, 255, 1);
-        background: rgba(2, 46, 73, 0.8);
-        border-radius: 0;
-        box-shadow: 0px 1px 25px 4px rgba(47, 46, 46, 0.3);
-        padding-top: 2.5rem;
-    }
-
-    .block {
-        width: 90%;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .textStyle {
-        color: rgba(255, 255, 255, 0.75);
-        font-family: "Geogrotesque", "Helvetica", "Arial", sans-serif;
-        font-size: 1.4rem;
-        transition: color 0.3s;
-    }
-
-    a.textStyle:hover {
-        color: rgba(0, 214, 70, 0.7);
-    }
-
-    .greeting {
-        font-size: 6vw;
-        color: rgba(255, 255, 255, .75);
-        font-family: cursive, "Geogrotesque", "Helvetica", "Arial", sans-serif;
-        font-weight: normal;
-        margin-top: 0;
-        margin-bottom: 7%;
-        position: relative;
-    }
-
-    .greeting .description {
-        font-size: 1.8vw;
-    }
-
-    .txtNew {
-        word-wrap: break-word;
-        width: 35rem;
-    }
-
-    .txtNew h6 {
-        font-size: 1.6rem;
-        margin-top: 0;
-        margin-bottom: 5%;
-        text-align: center;
-        text-transform: uppercase;
-        color: rgba(0, 214, 70, 0.7);
-    }
-
-    .txtNew div {
-        text-align: left;
-        margin: 0 2rem 3rem;
-        font-size: 1.4rem;
-    }
-
-    .txtNew ul {
-        width: 100%;
-    }
-
-    .txtNew ul li {
-        list-style-type: circle;
-        color: rgba(0, 214, 70, 1);
-        font-size: 1.4rem;
-
-    }
-
-    .logo {
-        position: absolute;
-        left: 7rem;
-        height: 3.8rem;
-        width: 4rem;
-        border-radius: 50%;
-        margin: 1rem;
-        box-shadow: 3px 0px 0px 0px rgba(0, 214, 70, 1);
-    }
-
-    .logo .letter {
-        position: absolute;
-        right: 25%;
-        top: 14%;
-        font-size: 2rem;
-        margin: 0;
-        color: rgba(0, 214, 70, 1);
-    }
-
-    #skills .title {
-        padding-bottom: 5rem;
-    }
-
-    .skill-bar {
-        font-family: cursive;
-        width: 75%;
-        height: 30px;
-        position: relative;
-        margin: 20px auto;
-    }
-
-    .skill-area {
-        margin-left: 5px;
-        color: #fff;
-        font-size: 14px;
-        height: 25px;
-        line-height: 25px;
-    }
-
-    .percent {
-        padding-right: 5px;
-        color: #fff;
-        font-size: 14px;
-        height: 25px;
-        line-height: 25px;
-        margin-left: auto;
-    }
-
-    #skill-html {
-        width: 20%;
-        height: 25px;
-        background-color: rgba(0, 214, 70, 0.75);
-        display: flex;
-    }
-
-    .skill-html-animation {
-        animation: Animate-HTML 3s;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes Animate-HTML {
-        from {
-            width: 20%;
-        }
-        to {
-            width: 100%
-        }
-    }
-
-    #skill-css {
-        width: 20%;
-        height: 25px;
-        line-height: 25px;
-        background-color: #55a69f;
-        display: flex;
-    }
-
-    .skill-css-animation {
-        animation: Animate-CSS 3s;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes Animate-CSS {
-        from {
-            width: 20%;
-        }
-        to {
-            width: 90%
-        }
-    }
-
-    #skill-jQuery {
-        width: 20%;
-        height: 25px;
-        background-color: #99856d;
-        display: flex;
-    }
-
-    .skill-jQuery-animation {
-        animation: Animate-jQuery 2s;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes Animate-jQuery {
-        from {
-            width: 20%;
-        }
-        to {
-            width: 65%
-        }
-    }
-
-    #skill-JS {
-        width: 20%;
-        height: 25px;
-        background-color: #c44e45;
-        display: flex;
-    }
-
-    .skill-JS-animation {
-        animation: Animate-JS 4s;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes Animate-JS {
-        from {
-            width: 20%;
-        }
-        to {
-            width: 85%
-        }
-    }
-
-    #skill-react {
-        width: 20%;
-        height: 25px;
-        background-color: #f8a51e;
-        display: flex;
-    }
-
-    .skill-react-animation {
-        animation: Animate-ReactJS 2s;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes Animate-ReactJS {
-        from {
-            width: 20%;
-        }
-        to {
-            width: 70%
-        }
-    }
-
-    #skill-xml {
-        width: 20%;
-        height: 25px;
-        background-color: #5aa669;
-        display: flex;
-    }
-
-    .skill-xml-animation {
-        animation: Animate-XML 3s;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes Animate-XML {
-        from {
-            width: 20%;
-        }
-        to {
-            width: 60%
-        }
-    }
-
-    #skill-sql {
-        width: 20%;
-        height: 25px;
-        background-color: #23b1db;
-        display: flex;
-    }
-
-    .skill-sql-animation {
-        animation: Animate-SQL 2s;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes Animate-SQL {
-        from {
-            width: 20%;
-        }
-        to {
-            width: 62%
-        }
-    }
-
-    #contact-form input[type="text"],
-    #contact-form input[type="email"],
-    #contact-form input[type="tel"],
-    #contact-form input[type="url"],
-    #contact-form textarea,
-    #contact-form button[type="submit"] {
-        font: 400 12px/16px "Geogrotesque", "Helvetica", "Arial", sans-serif;;
-    }
-
-    #contact-form {
-        text-align: left;
-        width: 60%;
-        background: rgba(2, 46, 73, 0.8);
-        padding: 25px;
-        margin: 50px 0;
-        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    }
-
-    #contact-form fieldset {
-        border: medium none !important;
-        margin: 0 0 10px;
-        min-width: 100%;
-        padding: 0;
-        width: 100%;
-    }
-
-    #contact-form input[type="text"],
-    #contact-form input[type="email"],
-    #contact-form input[type="tel"],
-    #contact-form input[type="url"],
-    #contact-form textarea {
-        width: 97%;
-        border: none;
-        background: #FFF;
-        margin: 0 0 5px;
-        padding: 8px;
-    }
-
-    #contact-form textarea {
-        height: 100px;
-        max-width: 100%;
-        resize: none;
-    }
-
-    #contact-form button[type="submit"] {
-        cursor: pointer;
-        width: 15rem;
-        border: none;
-        background: rgba(0, 214, 70, 0.7);
-        color: #FFF;
-        margin: 0 0 5px;
-        padding: 10px;
-        font-size: 18px;
-        transition: background-color 0.3s ease-in-out;
-    }
-
-    #contact-form button[type="submit"]:hover {
-        background: rgba(0, 214, 70, 0.5);
-    }
-
-    #contact-form input:focus,
-    #contact-form textarea:focus {
-        outline: 0;
-    }
-
-    @media only screen and (max-width: 768px) {
-        .hero {
-            position: relative;
-        }
-
-        .container.tiltTop:before {
-            position: relative;
-        }
-
-        .container.secondary {
-            top: 100vh;
-        }
-
-        .container.third {
-            top: 200vh;
-        }
-
-        .container.fourth {
-            top: 300vh;
-        }
-    }
-    /* ==========================================================================
-       Helper classes
-       ========================================================================== */
-    /*
-     * Hide visually and from screen readers
-     */
-    .hidden {
-        display: none !important;
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
     }
 
     /*
-     * Hide only visually, but have it available for screen readers:
-     * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-     *
-     * 1. For long content, line feeds are not interpreted as spaces and small width
-     *    causes content to wrap 1 word per line:
-     *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-    .visuallyhidden {
-        border: 0;
-        clip: rect(0 0 0 0);
-        -webkit-clip-path: inset(50%);
-        clip-path: inset(50%);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-        white-space: nowrap; /* 1 */
+    thead {
+        display: table-header-group;
     }
 
-    /*
-     * Extends the .visuallyhidden class to allow the element
-     * to be focusable when navigated to via the keyboard:
-     * https://www.drupal.org/node/897638
-     */
-    .visuallyhidden.focusable:active,
-    .visuallyhidden.focusable:focus {
-        clip: auto;
-        -webkit-clip-path: none;
-        clip-path: none;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        position: static;
-        width: auto;
-        white-space: inherit;
+    tr,
+    img {
+        page-break-inside: avoid;
     }
 
-    /*
-     * Hide visually and from screen readers, but maintain layout
-     */
-    .invisible {
-        visibility: hidden;
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
     }
 
-    /*
-     * Clearfix: contain floats
-     *
-     * For modern browsers
-     * 1. The space content is one way to avoid an Opera bug when the
-     *    `contenteditable` attribute is included anywhere else in the document.
-     *    Otherwise it causes space to appear at the top and bottom of elements
-     *    that receive the `clearfix` class.
-     * 2. The use of `table` rather than `block` is only necessary if using
-     *    `:before` to contain the top-margins of child elements.
-     */
-    .clearfix:before,
-    .clearfix:after {
-        content: " "; /* 1 */
-        display: table; /* 2 */
+    h2,
+    h3 {
+        page-break-after: avoid;
     }
-
-    .clearfix:after {
-        clear: both;
-    }
-
-    @media print,
-    (-webkit-min-device-pixel-ratio: 1.25),
-    (min-resolution: 1.25dppx),
-    (min-resolution: 120dpi) {
-        /* Style adjustments for high resolution devices */
-    }
-
-    /* ==========================================================================
-       Print styles.
-       Inlined to avoid the additional HTTP request:
-       http://www.phpied.com/delay-loading-your-print-css/
-       ========================================================================== */
-    @media print {
-        *,
-        *:before,
-        *:after {
-            background: transparent !important;
-            color: #000 !important;
-            /* Black prints faster:
-                                              http://www.sanbeiji.com/archives/953 */
-            box-shadow: none !important;
-            text-shadow: none !important;
-        }
-
-        a,
-        a:visited {
-            text-decoration: underline;
-        }
-
-        a[href]:after {
-            content: " (" attr(href) ")";
-        }
-
-        abbr[title]:after {
-            content: " (" attr(title) ")";
-        }
-
-        /*
-         * Don't show links that are fragment identifiers,
-         * or use the `javascript:` pseudo protocol
-         */
-        a[href^="#"]:after,
-        a[href^="javascript:"]:after {
-            content: "";
-        }
-
-        pre {
-            white-space: pre-wrap !important;
-        }
-
-        pre,
-        blockquote {
-            border: 1px solid #999;
-            page-break-inside: avoid;
-        }
-
-        /*
-         * Printing Tables:
-         * http://css-discuss.incutio.com/wiki/Printing_Tables
-         */
-        thead {
-            display: table-header-group;
-        }
-
-        tr,
-        img {
-            page-break-inside: avoid;
-        }
-
-        p,
-        h2,
-        h3 {
-            orphans: 3;
-            widows: 3;
-        }
-
-        h2,
-        h3 {
-            page-break-after: avoid;
-        }
-    }
+}

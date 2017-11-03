@@ -1,0 +1,36 @@
+{
+    "about-items": [
+        {
+            "about-id": 0,
+            "about-title": "accomplishments",
+            "about-desc": [
+                "Proficiency in CSS3, HTML5 and Javascript",
+                "Proficiency in Javascript libraries and frameworks like jQuery, React",
+                "Experience with Webpack, Gulp, Babel",
+                "Experience with CSS preprocessors",
+                "Knowledge of responsive and mobile design",
+                "Experience with photo editing software such as Photoshop",
+                "Problem solving skills",
+                "Experience with version control like Git, GitHub",
+                "Understand of web development process (design, develop, deploy)"
+            ],
+            "social-links":[]
+        },
+        {
+            "about-id": 1,
+            "about-title": "About Me",
+            "about-desc": ["As a student at BovAcademy, I’m training my self becoming skilled front end developer with ability interpreting UI/UX wireframes, translating UX concept into code, collaborating with others who are involved in project."],
+            "social-links":[]
+        },
+        {
+            "about-id": 2,
+            "about-title": "Let's Connect",
+            "about-desc": [],
+            "social-links":[
+                {"link-to": "mailto:vanhiep1086@gmail.com","text": "vanhiep1086@gmail.com"},
+                {"link-to": "https://github.com/hiepvo","text": "GitHub"},
+                {"link-to": "https://www.linkedin.com/in/hiepvo1086/","text": "linkedIn"}
+            ]
+        }
+    ]
+}

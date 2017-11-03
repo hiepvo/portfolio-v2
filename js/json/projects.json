@@ -1,0 +1,40 @@
+{
+    "project-items": [
+        {
+            "project-id": 0,
+            "project-link": "https://hiepvo.github.io/components/",
+            "bg_image": "/images/btn1.png",
+            "project-desc": "This career path provides the most comprehensive education in frontend engineering. You will learn JavaScript in depth, design patterns, unit testing, responsive design, relevant math, problem-solving, art of programming and frontend dev, UI/UX design, accessibility, frontend frameworks, architecting frontend apps, software engineering and more."
+        },
+        {
+            "project-id": 1,
+            "project-link": "https://photo-galleries-react.firebaseapp.com/galleries/",
+            "bg_image": "/images/gal1.png",
+            "project-desc": "This career path provides the most comprehensive education in frontend engineering. You will learn JavaScript in depth, design patterns, unit testing, responsive design, relevant math, problem-solving, art of programming and frontend dev, UI/UX design, accessibility, frontend frameworks, architecting frontend apps, software engineering and more."
+        },
+        {
+            "project-id": 2,
+            "project-link": "https://hiepvo.github.io/collaboration.modern-developer/",
+            "bg_image": "/images/colla2.png",
+            "project-desc": "This career path provides the most comprehensive education in frontend engineering. You will learn JavaScript in depth, design patterns, unit testing, responsive design, relevant math, problem-solving, art of programming and frontend dev, UI/UX design, accessibility, frontend frameworks, architecting frontend apps, software engineering and more."
+        },
+        {
+            "project-id": 3,
+            "project-link": "https://hiepvo.github.io/accordion-component/",
+            "bg_image": "/images/acc1.png",
+            "project-desc": "This career path provides the most comprehensive education in frontend engineering. You will learn JavaScript in depth, design patterns, unit testing, responsive design, relevant math, problem-solving, art of programming and frontend dev, UI/UX design, accessibility, frontend frameworks, architecting frontend apps, software engineering and more."
+        },
+        {
+            "project-id": 4,
+            "project-link": "http://hiepvo.github.io/product-listing-page/",
+            "bg_image": "/images/cart1.png",
+            "project-desc": "This career path provides the most comprehensive education in frontend engineering. You will learn JavaScript in depth, design patterns, unit testing, responsive design, relevant math, problem-solving, art of programming and frontend dev, UI/UX design, accessibility, frontend frameworks, architecting frontend apps, software engineering and more."
+        },
+        {
+            "project-id": 5,
+            "project-link": "http://hiepvo.github.io/calculator/",
+            "bg_image": "/images/calc1.png",
+            "project-desc": "This career path provides the most comprehensive education in frontend engineering. You will learn JavaScript in depth, design patterns, unit testing, responsive design, relevant math, problem-solving, art of programming and frontend dev, UI/UX design, accessibility, frontend frameworks, architecting frontend apps, software engineering and more."
+        }
+    ]
+}

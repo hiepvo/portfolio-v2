@@ -1,0 +1,39 @@
+{
+    "skills": [
+        {
+            "skill-id": "skill-html",
+            "skill-text": "HTML",
+            "skill-percent": "100%"
+        },
+        {
+            "skill-id": "skill-css",
+            "skill-text": "CSS/CSS3",
+            "skill-percent": "90%"
+        },
+        {
+            "skill-id": "skill-JS",
+            "skill-text": "JavaScript",
+            "skill-percent": "80%"
+        },
+        {
+            "skill-id": "skill-react",
+            "skill-text": "ReactJS",
+            "skill-percent": "62%"
+        },
+        {
+            "skill-id": "skill-jQuery",
+            "skill-text": "jQuery",
+            "skill-percent": "65%"
+        },
+        {
+            "skill-id": "skill-xml",
+            "skill-text": "XML",
+            "skill-percent": "60%"
+        },
+        {
+            "skill-id": "skill-sql",
+            "skill-text": "MS-SQL",
+            "skill-percent": "62%"
+        }
+    ]
+}

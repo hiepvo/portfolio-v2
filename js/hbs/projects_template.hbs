@@ -1,3 +1,23 @@
-<section id="projects" class="container tiltTop third">
-    <h2 class="title">Projects</h2>
+<section id = "projects" class = "container tiltTop third">
+    <h2 class = "title">Projects</h2>
+    <div>
+        <ul class = "grid">
+            {{#each project-items}}
+                <li class = "grid-item">
+
+                    <div class = "space-list-item">
+                            <div class = "project-photo"
+                                 style="background: url({{bg_image}})">
+                            </div>
+                            <div class="project-content">
+                                <div class="project-desc">
+                                    {{project-desc}}
+                                </div>
+                                    <div class="project-demo"><a href="{{project-link}}">Demo</a></div>
+                            </div>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
 </section>

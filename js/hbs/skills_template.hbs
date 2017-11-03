@@ -1,53 +1,13 @@
 <section id="skills" class="container tiltTop secondary">
     <h2 class="title">Professional</h2>
     <div class="box-content block">
+        {{#each skills}}
         <div class="skill-bar">
-            <div id="skill-html">
-                <span class="skill-area ">HTML</span>
-                <span class="percent ">100%</span>
+            <div id="{{skill-id}}">
+                <span class="skill-area">{{skill-text}}</span>
+                <span class="percent">{{skill-percent}}</span>
             </div>
         </div>
-
-        <div class="skill-bar">
-            <div id="skill-css">
-                <span class="skill-area ">CSS/CSS3</span>
-                <span class="percent ">90%</span>
-            </div>
-        </div>
-
-        <div class="skill-bar">
-            <div id="skill-JS">
-                <span class="skill-area ">Javascript</span>
-                <span class="percent ">85%</span>
-            </div>
-        </div>
-
-        <div class="skill-bar">
-            <div id="skill-react">
-                <span class="skill-area ">ReactJS</span>
-                <span class="percent ">62%</span>
-            </div>
-        </div>
-
-        <div class="skill-bar">
-            <div id="skill-jQuery">
-                <span class="skill-area ">jQuery</span>
-                <span class="percent ">65%</span>
-            </div>
-        </div>
-
-        <div class="skill-bar">
-            <div id="skill-xml">
-                <span class="skill-area ">XML </span>
-                <span class="percent ">60%</span>
-            </div>
-        </div>
-
-        <div class="skill-bar">
-            <div id="skill-sql">
-                <span class="skill-area ">MS-SQL </span>
-                <span class="percent ">62%</span>
-            </div>
-        </div>
+        {{/each}}
     </div>
 </section>
