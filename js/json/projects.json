@@ -2,39 +2,45 @@
     "project-items": [
         {
             "project-id": 0,
-            "project-link": "https://hiepvo.github.io/components/",
-            "bg_image": "/images/btn1.png",
-            "project-desc": "This career path provides the most comprehensive education in frontend engineering. You will learn JavaScript in depth, design patterns, unit testing, responsive design, relevant math, problem-solving, art of programming and frontend dev, UI/UX design, accessibility, frontend frameworks, architecting frontend apps, software engineering and more."
+            "project-link": "https://evolution-ui.github.io/evolution-ui/",
+            "bg_image": "/images/ui.png",
+            "project-tech": "Html5, Css3 & vanilla Javacript, Sass",
+            "project-desc": "This UI Framework was built on the ideas that there was not any UI component with same function built yet. This project was created by students of Bov Academy collaborating via GitHub. Bov Academy encouraged every student should build at least 3 innovative components to explore there creativity."
         },
         {
             "project-id": 1,
             "project-link": "https://photo-galleries-react.firebaseapp.com/galleries/",
             "bg_image": "/images/gal1.png",
-            "project-desc": "This career path provides the most comprehensive education in frontend engineering. You will learn JavaScript in depth, design patterns, unit testing, responsive design, relevant math, problem-solving, art of programming and frontend dev, UI/UX design, accessibility, frontend frameworks, architecting frontend apps, software engineering and more."
+            "project-tech": "React,Babel, Webpack, Html5, Css3 & vanilla Javacript",
+            "project-desc": "This project was built on the event learning React. It was inspired website 500px.com. Currently, only galleries worked. I'm working on other functions & try to get it done."
         },
         {
             "project-id": 2,
             "project-link": "https://hiepvo.github.io/collaboration.modern-developer/",
             "bg_image": "/images/colla2.png",
-            "project-desc": "This career path provides the most comprehensive education in frontend engineering. You will learn JavaScript in depth, design patterns, unit testing, responsive design, relevant math, problem-solving, art of programming and frontend dev, UI/UX design, accessibility, frontend frameworks, architecting frontend apps, software engineering and more."
+            "project-tech": "HTML5, Css3",
+            "project-desc": "This is assigned project that I collaborated with another student. Good practice on how to collaborate on GitHub and teamwork"
         },
         {
             "project-id": 3,
             "project-link": "https://hiepvo.github.io/accordion-component/",
             "bg_image": "/images/acc1.png",
-            "project-desc": "This career path provides the most comprehensive education in frontend engineering. You will learn JavaScript in depth, design patterns, unit testing, responsive design, relevant math, problem-solving, art of programming and frontend dev, UI/UX design, accessibility, frontend frameworks, architecting frontend apps, software engineering and more."
+            "project-tech": "HTML5, CSS3",
+            "project-desc": "A customized of Css3 Accordion without using Javascript"
         },
         {
             "project-id": 4,
             "project-link": "http://hiepvo.github.io/product-listing-page/",
             "bg_image": "/images/cart1.png",
-            "project-desc": "This career path provides the most comprehensive education in frontend engineering. You will learn JavaScript in depth, design patterns, unit testing, responsive design, relevant math, problem-solving, art of programming and frontend dev, UI/UX design, accessibility, frontend frameworks, architecting frontend apps, software engineering and more."
+            "project-tech": "HTML5, CSS3, vanilla JavaScript",
+            "project-desc": "The e-commerce website built only with vanilla Javascript"
         },
         {
             "project-id": 5,
             "project-link": "http://hiepvo.github.io/calculator/",
             "bg_image": "/images/calc1.png",
-            "project-desc": "This career path provides the most comprehensive education in frontend engineering. You will learn JavaScript in depth, design patterns, unit testing, responsive design, relevant math, problem-solving, art of programming and frontend dev, UI/UX design, accessibility, frontend frameworks, architecting frontend apps, software engineering and more."
+            "project-tech": "HTML5, CSS3, vanilla JavaScript",
+            "project-desc": "This fun project I built when I just started learning HTML5, CSS3 at Bov Academy."
         }
     ]
 }

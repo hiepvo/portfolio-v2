@@ -17,7 +17,7 @@ jsonArr.push('/js/json/contact.json');
 
 var helperFunc = function(xhr){
     return function(){
-        if(xhr.readyState === 4 && xhr.status == 200){
+        if(xhr.readyState === 4 && xhr.status >= 200 && xhr.status <= 400){
             var data = JSON.parse(xhr.responseText);
             switch (Object.keys(data)[0]){
                 case 'nav-items':
@@ -50,7 +50,6 @@ for(var i = 0; i < jsonArr.length; i++){
     xhr.open('GET', jsonArr[i], true);
     xhr.send();
     xhr.onreadystatechange = helperFunc(xhr);
-
 }
 
 utils.smoothScroll();
