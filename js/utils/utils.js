@@ -1,3 +1,5 @@
+let SmoothScroll = require('smooth-scroll');
+
 const addClass = function(el, className){
     if(el.classList)
         el.classList.add(className);
@@ -56,7 +58,6 @@ function scrollPos(){
     didScroll        = true;
     let skills       = document.querySelectorAll('.skill-bar [id^=\'skill-\']');
     let sec_skills   = document.querySelector('#skills');
-    let main_nav   = document.querySelector('.main-nav');
 
     let pageY        = window.scrollY;
     parallax();

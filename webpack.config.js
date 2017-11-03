@@ -1,9 +1,10 @@
 let path = require('path');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
+let CopyWebpackPlugin = require('copy-webpack-plugin');
 let webpack           = require('webpack');
 
 let config = {
-    entry: ['./js/plugins.js', './js/main.js', ],
+    entry: ['smooth-scroll', './js/plugins.js', './js/main.js', ],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main_bundle.js',
@@ -31,7 +32,12 @@ let config = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html'
-        })
+        }),
+        new CopyWebpackPlugin([
+            {from: 'images', to: 'images'},
+            {from: 'js/hbs', to: 'js/hbs'},
+            {from: 'js/json', to: 'js/json'}
+        ])
     ],
 };
 if(process.env.NODE_ENV === 'production'){
