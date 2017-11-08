@@ -280,7 +280,7 @@ li {
 .container.first {
     padding-top: 8rem;
     background: linear-gradient(to bottom, #2f0735, #0C8592);
-    min-height: 80rem;
+    min-height: 75rem;
 }
 
 .container.secondary {
@@ -328,7 +328,7 @@ li {
 
 .container > .title {
     color: rgba(255, 255, 255, 0.75);
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: normal;
     margin: 0;
 }
@@ -494,7 +494,7 @@ a.textStyle:hover {
         width: 20%;
     }
     to {
-        width: 90%
+        width: 95%
     }
 }
 
@@ -536,7 +536,7 @@ a.textStyle:hover {
         width: 20%;
     }
     to {
-        width: 85%
+        width: 90%
     }
 }
 
@@ -692,11 +692,10 @@ a.textStyle:hover {
 
 .space-list-item {
     position: relative;
-    width: 36rem;
-    height: 35rem;
+    width: 30rem;
+    height: 32rem;
     overflow: hidden;
-    transition: box-shadow 0.35s ease-out;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1), 0 0 6px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .space-list-item,
@@ -711,7 +710,7 @@ a.textStyle:hover {
 
 .project-content {
     line-height: 2rem;
-    width: 36rem;
+    width: 30rem;
     margin: 0 auto;
     color: #ffffff;
     background-color: #172131;
@@ -719,7 +718,7 @@ a.textStyle:hover {
     border-top: 4px solid #5590b9;
     text-align: left;
     overflow: hidden;
-    height: 35rem;
+    height: 32rem;
     left: 0;
     bottom: -1px;
     clip: rect(36rem 36rem 36rem 0);
@@ -733,16 +732,15 @@ a.textStyle:hover {
 
 
 .project-content .project-desc {
-    padding: 1.8rem 2rem;
-    line-height: 2rem;
+    padding: 1rem 2rem;
     min-height: 25rem;
     font-weight: 300;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #d3ddef;
 }
 
 .project-content .project-desc div:nth-of-type(2){
-    margin-top: 1rem;
+    margin-top: .2rem;
 }
 
 .project-content .project-desc .project-tech{
