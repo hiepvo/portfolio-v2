@@ -139,6 +139,7 @@ li {
 
 .main-nav ul li {
     float: left;
+    padding-right: 4rem;
 }
 
 .main-nav li a {
@@ -146,7 +147,8 @@ li {
     color: #fff;
     text-transform: uppercase;
     transition: 0.3s color;
-    padding: 0 20px 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .main-nav li a:hover {
@@ -168,7 +170,7 @@ li {
 }
 
 .main-nav .menu-icon .navicon {
-    background: rgba(0, 214, 70, 0.7);;
+    background: rgba(0, 214, 70, 0.7);
     display: block;
     height: 2px;
     position: relative;
@@ -257,6 +259,7 @@ li {
 }
 .active {
     color: #9f4d57 !important;
+    border-bottom: 2px solid #9f4d57;
 }
 
 #portfolio{

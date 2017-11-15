@@ -25,29 +25,29 @@ const hasClass = function(el, className){
 
 function setActive(navItem){
     if(navItem !== null){
-        removeActiveNavClass();
+        removeActiveClass();
         addClass(navItem.target, 'active');
     }
 }
 
 function setActiveOnScroll(section){
     if(section.id === 'skills'){
-        let skills       = document.querySelectorAll('.skill-bar [id^=\'skill-\']');
+        let skills = document.querySelectorAll('.skill-bar [id^=\'skill-\']');
         for(let i = 0; i < skills.length; i++){
             let el = document.querySelector('#' + skills[i].id);
             addClass(el, skills[i].id + '-animation');
         }
     }
+
     let item = document.querySelector('#nav-' + section.id);
+    removeActiveClass(section);
     addClass(item, 'active');
+
 }
 
-function removeActiveNavClass(cur){
-    let els = document.getElementsByClassName('nav-item');
-    for(let el of els){
-        if(el !== cur)
-            removeClass(el, 'active')
-    }
+function removeActiveClass(cur){
+    let el = document.querySelector('.active');
+    removeClass(el, 'active')
 }
 
 const smoothScroll = function(){
@@ -60,7 +60,6 @@ const smoothScroll = function(){
             var toggle = event.target.closest(selector);
             if(!toggle || toggle.tagName.toLowerCase() !== 'a') return;
             var anchor = document.querySelector(toggle.hash);
-            setActive(event);//for nav
             if(!anchor) return;
             event.preventDefault(); // Prevent default click event
             scroll.animateScroll(anchor, toggle, settings || {}); // Animate scroll
@@ -70,7 +69,7 @@ const smoothScroll = function(){
     };
 
 // Run our function
-    smoothScrollWithoutHash('a[href*="#"]', {header: '[data-scroll-header]'}, {speed: 1200});
+    smoothScrollWithoutHash('a[href*="#"]', {header: '[data-scroll-header]', speed: 1200});
 }
 
 let didScroll      = false;
@@ -90,19 +89,15 @@ function scrollPos(){
 
     parallax();
     if(sec_about !== null && sec_about.getBoundingClientRect().top <= 250){
-        removeActiveNavClass(sec_about);
         setActiveOnScroll(sec_about);
     }
     if(sec_skills !== null && sec_skills.getBoundingClientRect().top <= 250){
-        removeActiveNavClass(sec_projects);
         setActiveOnScroll(sec_skills);
     }
     if(sec_projects !== null && sec_projects.getBoundingClientRect().top <= 250){
-        removeActiveNavClass(sec_projects)
         setActiveOnScroll(sec_projects);
     }
     if(sec_contact !== null && sec_contact.getBoundingClientRect().top <= 250){
-        removeActiveNavClass(sec_contact)
         setActiveOnScroll(sec_contact);
     }
 }
