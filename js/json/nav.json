@@ -1,23 +1,23 @@
 {
     "nav-items": [
         {
-            "nav-id": 0,
+            "nav-id": "nav-about",
             "nav-link": "/#about",
             "nav-text": "About Me",
             "active": "active"
         },
         {
-            "nav-id": 1,
+            "nav-id": "nav-skills",
             "nav-link": "/#skills",
             "nav-text": "Professional"
         },
         {
-            "nav-id": 2,
+            "nav-id": "nav-projects",
             "nav-link": "/#projects",
             "nav-text": "Projects"
         },
         {
-            "nav-id": 3,
+            "nav-id": "nav-contact",
             "nav-link": "/#contact",
             "nav-text": "Contact"
         }

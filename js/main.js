@@ -19,19 +19,15 @@ var helperFunc = function(xhr){
     return function(){
         if(xhr.readyState === 4 && xhr.status >= 200 && xhr.status <= 400){
             var data = JSON.parse(xhr.responseText);
-            switch (Object.keys(data)[0]){
+            switch(Object.keys(data)[0]){
                 case 'nav-items':
                     createHTML(navTemplate, data);
-                    var items = document.getElementsByClassName('nav-item');
-                    for(let item of items){
-                        item.addEventListener('click', clickHandler, false)
-                    }
                     break;
                 case 'about-items':
-                    createHTML(aboutTemplate,data);
+                    createHTML(aboutTemplate, data);
                     break;
                 case 'skills':
-                    createHTML(skillsTemplate,data);
+                    createHTML(skillsTemplate, data);
                     break;
                 case 'project-items':
                     createHTML(projectTemplate, data);
@@ -39,7 +35,6 @@ var helperFunc = function(xhr){
                 default:
                     createHTML(contactTemplate);
                     break;
-
             }
         }
     }
@@ -54,15 +49,6 @@ for(var i = 0; i < jsonArr.length; i++){
 
 utils.smoothScroll();
 
-function clickHandler(event){
-    let els = document.getElementsByClassName('nav-item');
-    for(let el of els){
-        utils.removeClass(el, 'active')
-    }
-    let el = event.target;
-    utils.addClass(el, 'active')
-}
-
 function createHTML(template, data){
     var portfolio = document.getElementById('portfolio');
     if(data !== null){
@@ -72,5 +58,3 @@ function createHTML(template, data){
         portfolio.innerHTML += template();
     }
 }
-
-

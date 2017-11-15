@@ -23,6 +23,33 @@ const hasClass = function(el, className){
         return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
 }
 
+function setActive(navItem){
+    if(navItem !== null){
+        removeActiveNavClass();
+        addClass(navItem.target, 'active');
+    }
+}
+
+function setActiveOnScroll(section){
+    if(section.id === 'skills'){
+        let skills       = document.querySelectorAll('.skill-bar [id^=\'skill-\']');
+        for(let i = 0; i < skills.length; i++){
+            let el = document.querySelector('#' + skills[i].id);
+            addClass(el, skills[i].id + '-animation');
+        }
+    }
+    let item = document.querySelector('#nav-' + section.id);
+    addClass(item, 'active');
+}
+
+function removeActiveNavClass(cur){
+    let els = document.getElementsByClassName('nav-item');
+    for(let el of els){
+        if(el !== cur)
+            removeClass(el, 'active')
+    }
+}
+
 const smoothScroll = function(){
     let scroll                    = new SmoothScroll()
     const smoothScrollWithoutHash = function(selector, settings){
@@ -33,8 +60,8 @@ const smoothScroll = function(){
             var toggle = event.target.closest(selector);
             if(!toggle || toggle.tagName.toLowerCase() !== 'a') return;
             var anchor = document.querySelector(toggle.hash);
+            setActive(event);//for nav
             if(!anchor) return;
-
             event.preventDefault(); // Prevent default click event
             scroll.animateScroll(anchor, toggle, settings || {}); // Animate scroll
         };
@@ -56,27 +83,36 @@ let scrollInterval = setInterval(function(){
 
 function scrollPos(){
     didScroll        = true;
-    let skills       = document.querySelectorAll('.skill-bar [id^=\'skill-\']');
     let sec_skills   = document.querySelector('#skills');
+    let sec_about    = document.querySelector('#about');
+    let sec_contact  = document.querySelector('#contact');
+    let sec_projects = document.querySelector('#projects');
 
-    let pageY        = window.scrollY;
     parallax();
-    if(sec_skills !== null){
-        if(sec_skills.getBoundingClientRect().top <= pageY  +250){
-            for(let i = 0; i < skills.length; i++){
-                let el = document.querySelector('#' + skills[i].id);
-                addClass(el, skills[i].id + '-animation');
-            }
-        }
+    if(sec_about !== null && sec_about.getBoundingClientRect().top <= 250){
+        removeActiveNavClass(sec_about);
+        setActiveOnScroll(sec_about);
+    }
+    if(sec_skills !== null && sec_skills.getBoundingClientRect().top <= 250){
+        removeActiveNavClass(sec_projects);
+        setActiveOnScroll(sec_skills);
+    }
+    if(sec_projects !== null && sec_projects.getBoundingClientRect().top <= 250){
+        removeActiveNavClass(sec_projects)
+        setActiveOnScroll(sec_projects);
+    }
+    if(sec_contact !== null && sec_contact.getBoundingClientRect().top <= 250){
+        removeActiveNavClass(sec_contact)
+        setActiveOnScroll(sec_contact);
     }
 }
 
 document.addEventListener('scroll', scrollPos, false);
 
 function parallax(){
-    let sec_about   = document.querySelector('#about');
-    var scrolled = window.scrollY;
-    if(sec_about !== null) sec_about.style.top = -(scrolled*0.0215)+'rem';
+    let sec_about = document.querySelector('#about');
+    var scrolled  = window.scrollY;
+    if(sec_about !== null) sec_about.style.top = -(scrolled * 0.0215) + 'rem';
 }
 
 module.exports = {
